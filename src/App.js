@@ -13,7 +13,7 @@ function App() {
 
   useEffect(() => {
     db.collection('entries').orderBy('timestamp','desc').onSnapshot(snapshot => {
-         setEntries(snapshot.docs.map(doc => doc.data().entry));
+         setEntries(snapshot.docs.map(doc => ({id:doc.id,entry:doc.data().entry})));
     })
 
   }, []);
@@ -37,7 +37,7 @@ function App() {
     <Input className="input-text" value={input} onChange={event => setInput(event.target.value)}/>
     </FormControl>
     <Button className="submit-btn" disabled={!input} variant="contained" color="primary" type="submit" onClick={addEntry}>
-    Add Entry
+    <i class="fi-rr-add"></i>
     </Button>
     </form>
     

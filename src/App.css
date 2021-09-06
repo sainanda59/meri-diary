@@ -13,6 +13,23 @@
   background-size: contain;
 }
 
+.head-title{
+ padding: 8px 4px;
+}
+
+.submit-btn{
+  margin-top: 8px !important;
+}
+
+.fi-rr-add{
+ padding: 4px;
+ font-size: 20px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+
 .entries-container{
   display: grid;
   justify-content: space-around;
