@@ -29,15 +29,15 @@ function Entry({entry}) {
             <InputLabel className="input-label">Missed Something?</InputLabel>
             <Input className="update-text" value={input} onChange={event => setInput(event.target.value)}/>
             </FormControl>
-            <Button type="submit" className="update-btn" onClick={updateEntry} variant="contained" color="primary"><i class="fi-rr-checkbox"></i> Save</Button>
+            <Button type="submit" className="update-btn" onClick={updateEntry} variant="contained" color="primary"><i class="far fa-save"></i>Save</Button>
             </form>
             </div>
         </Modal>
         
         <div className="entry">
             <div className="edit-delete">
-            <Button className="edit-btn" onClick={e => setOpen(true)} variant="contained" color="primary"><i class="fi-rr-edit"></i> Edit</Button>
-            <Button className="delete-btn" variant="contained" color="secondary" onClick={event => db.collection('entries').doc(entry.id).delete() }> <i class="fi-rr-trash"></i> Delete</Button>
+            <Button className="edit-btn" onClick={e => setOpen(true)} variant="contained" color="primary"><i class="fas fa-edit"></i> Edit</Button>
+            <Button className="delete-btn" variant="contained" color="secondary" onClick={event => db.collection('entries').doc(entry.id).delete() }> <i class="fas fa-trash-alt"></i> Delete</Button>
             </div>
             <div className="entry-text">
                 {entry.entry}

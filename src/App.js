@@ -30,14 +30,14 @@ function App() {
   }
   return (
     <div className="App">
-      <h1 className="head-title">Meri Diary <i class="fi-rr-book"></i></h1>
+      <h1 className="head-title">Meri Diary <i class="fas fa-book"></i></h1>
       <form>
     <FormControl>
       <InputLabel className="input-label">How was your Day?</InputLabel>
     <Input className="input-text" value={input} onChange={event => setInput(event.target.value)}/>
     </FormControl>
     <Button className="submit-btn" disabled={!input} variant="contained" color="primary" type="submit" onClick={addEntry}>
-    <i class="fi-rr-add"></i>
+    <i class="fas fa-plus-square fa-lg"></i>
     </Button>
     </form>
     
